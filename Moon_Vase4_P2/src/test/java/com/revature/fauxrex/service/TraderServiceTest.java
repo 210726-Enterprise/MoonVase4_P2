@@ -36,14 +36,14 @@ public class TraderServiceTest {
     @MockBean
     private TraderRepository repository;
 
-
-    @Test
-    public void getAllTradersTest() {
-        when(repository.findAll()).thenReturn(Stream
-                .of(tedTest)
-                .collect(Collectors.toList()));
-        assertEquals(1, service.getAllTraders().size());
-    }
+//
+//    @Test
+//    public void getAllTradersTest() {
+//        when(repository.findAll()).thenReturn(Stream
+//                .of(tedTest)
+//                .collect(Collectors.toList()));
+//        assertEquals(1, service.getAllTraders().size());
+//    }
 
     @Test
     public void getTraderByUsernameTest() {

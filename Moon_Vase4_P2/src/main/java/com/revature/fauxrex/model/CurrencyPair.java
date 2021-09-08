@@ -20,4 +20,9 @@ public class CurrencyPair {
 
     @Column(name="currency_pair", nullable = false)
     private String currencyPair;
+
+    public CurrencyPair(int id, String currencyPair){
+        this.id = id;
+        this.currencyPair = currencyPair;
+    }
 }
