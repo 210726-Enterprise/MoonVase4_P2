@@ -31,4 +31,11 @@ public class Account {
     @Column(name="nzd", nullable = false)
     private Double nzd;
 
+    public Account(int id, Double usd, Double gbp, Double eur, Double nzd) {
+        this.id = id;
+        this.usd = usd;
+        this.gbp = gbp;
+        this.eur = eur;
+        this.nzd = nzd;
+    }
 }

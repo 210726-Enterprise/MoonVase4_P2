@@ -21,7 +21,11 @@ public class Trader {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    public Trader(String username, String password, String firstName, String lastName) {
+
+
+    public Trader(int id, Account account, String username, String password, String firstName, String lastName) {
+        this.id = id;
+        this.account = account;
         this.username = username;
         this.password = password;
         this.firstName = firstName;

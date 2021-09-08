@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface TradeRepository extends JpaRepository<Trade, Integer> {
     List<Trade> findByTraderIdOrderByTimestampDesc(int traderId);
+    List<Trade> findByTraderId(int traderId);
+
 }

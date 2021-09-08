@@ -57,6 +57,7 @@ public class Trade {
     private Double usdAmount;
 
 
+
 }
 
 

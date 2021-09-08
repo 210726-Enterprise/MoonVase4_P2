@@ -53,7 +53,9 @@ public class TradeService {
     }
 
     public List<Trade> getTradeById(int id) {
-        return tradeRepository.findByTraderIdOrderByTimestampDesc(id);
+
+
+        return tradeRepository.findByTraderId(id);
     }
 
 }

@@ -1,4 +1,4 @@
-package com.revature.fauxrex.service.util;
+package com.revature.fauxrex.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

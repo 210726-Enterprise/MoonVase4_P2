@@ -5,7 +5,7 @@ import com.revature.fauxrex.model.AuthenticationResponse;
 import com.revature.fauxrex.model.Trader;
 import com.revature.fauxrex.model.AuthenticationRequest;
 import com.revature.fauxrex.repository.TraderRepository;
-import com.revature.fauxrex.service.util.JwtUtil;
+import com.revature.fauxrex.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
