@@ -15,37 +15,75 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+/**
+ * Service layer for Trader object
+ */
 @Service
 public class TraderService {
 
+    /**
+     * Repository layer for Trader object
+     */
     @Autowired
     private final TraderRepository traderRepository;
 
+    /**
+     * SPRING SECURITY
+     */
     @Autowired
     PasswordEncoder passwordEncoder;
 
+    /**
+     * SPRING SECURITY
+     */
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    /**
+     * TraderDetailsService for spring security
+     */
     @Autowired
     private TraderDetailsService traderDetailsService;
 
+    /**
+     * SPRING SECURITY
+     */
     @Autowired
     private JwtUtil jwtTokenUtil;
 
+    /**
+     * Constructor for TraderService object
+     * @param traderRepository TraderRepository object
+     */
     @Autowired
     public TraderService(TraderRepository traderRepository) {
         this.traderRepository = traderRepository;
     }
 
+    /**
+     * Read operation for a Trader by it's username
+     * @param username
+     * @return Trader read from database
+     */
     public Trader getTraderByUsername(String username){
         return traderRepository.findByUsername(username).orElseThrow(RuntimeException::new);
     }
 
+    /**
+     * Read operation for a Trader by it's ID
+     * @param id
+     * @return Trader read from database
+     */
     public Trader getTraderByTraderId(Integer id) {
         return traderRepository.findById(id).orElseThrow(RuntimeException::new);
     }
 
+    /**
+     * SPRING SECURITY authentication method to verify if credentials are correct and if trader exists
+     * @param authReq
+     * @return RESPONSE ENTITY
+     * @throws Exception
+     */
     public ResponseEntity<?> authenticate(AuthenticationRequest authReq) throws Exception {
         try {
             authenticationManager.authenticate(
@@ -62,9 +100,17 @@ public class TraderService {
         return ResponseEntity.ok(new AuthenticationResponse(jwt));
     }
 
+    /**
+     * Create a new Trader in database
+     * @param trader
+     * @return the new trader persisted in database
+     */
     public Trader saveNewTrader(Trader trader) {
         trader.setPassword(passwordEncoder.encode(trader.getPassword()));
 
+        /*
+        Setting their new account with initial amount of 100,000 USD
+         */
         Account acc = new Account();
         acc.setUsd(100000d);
         acc.setEur(0d);
@@ -75,6 +121,11 @@ public class TraderService {
         return traderRepository.save(trader);
     }
 
+    /**
+     * Update an existing Trader in the database
+     * @param trader to be updated with updated values
+     * @return trader after persisted to database
+     */
     public Trader saveTrader(Trader trader) {
         return traderRepository.save(trader);
     }

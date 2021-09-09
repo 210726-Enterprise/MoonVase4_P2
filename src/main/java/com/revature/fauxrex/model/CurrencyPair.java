@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * Model for CurrencyPair object
+ */
 @Entity
 @Table(name="currency_pair")
 
@@ -21,6 +24,11 @@ public class CurrencyPair {
     @Column(name="currency_pair", nullable = false)
     private String currencyPair;
 
+    /**
+     * Full constructor for CurrencyPair object
+     * @param id
+     * @param currencyPair
+     */
     public CurrencyPair(int id, String currencyPair){
         this.id = id;
         this.currencyPair = currencyPair;

@@ -9,6 +9,9 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
+/**
+ * Model for Trade object
+ */
 @Entity
 @Table(name="trade")
 
@@ -17,6 +20,15 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 public class Trade {
 
+    /**
+     * Full Constructor for Trade object
+     * @param id
+     * @param trader
+     * @param timestamp
+     * @param currencyPair
+     * @param rate
+     * @param usdAmount
+     */
     public Trade(int id, Trader trader,
                  Timestamp timestamp, CurrencyPair currencyPair,
                  Double rate, Double usdAmount) {
