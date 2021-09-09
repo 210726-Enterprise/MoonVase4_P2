@@ -5,17 +5,17 @@ Traders will be able to create a single account, deposit money, and compare the 
 The app will track these trades made for traders to review later. 
 
 #Tech Stack
-Java 8 
-Spring Boot / Spring MVC / Spring Security / Spring Data
-Angular 12
-Gain Capital External API
-AWS Elastic Beanstalk / S3 / RDS / CodePipeline / CodeBuild          
-Junit
-Mockito
-Apache Maven
-Github
-PostGreSQL deployed on AWS RDS
-Jacoco
+- Java 8 
+- Spring Boot / Spring MVC / Spring Security / Spring Data
+- Angular 12
+- Gain Capital External API
+- AWS Elastic Beanstalk / S3 / RDS / CodePipeline / CodeBuild          
+- Junit
+- Mockito
+- Apache Maven
+- Github
+- PostGreSQL deployed on AWS RDS
+- Jacoco
 
 ## High-Level Requirements
 
