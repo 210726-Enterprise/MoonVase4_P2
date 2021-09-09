@@ -4,6 +4,7 @@ import com.revature.fauxrex.model.*;
 import com.revature.fauxrex.service.TradeService;
 import com.revature.fauxrex.service.TraderService;
 import org.json.JSONException;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -51,5 +52,24 @@ public class TradeController {
         Trader trader = traderService.getTraderByUsername(username);
         return tradeService.getTradeById(trader.getId());
     }
+
+    //Endpoint to serve API credentials to front end
+    @GetMapping("/cg")
+    public @ResponseBody
+    String cg() throws JSONException {
+        JSONObject obj = new JSONObject();
+        String password = System.getenv("Password");
+        String username = System.getenv("UserName");
+        String appkey = System.getenv("AppKey");
+
+        obj.put("Password", password);
+        obj.put("UserName", username);
+        obj.put("AppKey", appkey);
+        obj.put("AppVersion", 1);
+
+        return obj.toString();
+    }
+
+
 
 }

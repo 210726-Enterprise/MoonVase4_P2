@@ -65,15 +65,6 @@ public class JwtUtil {
     }
 
     private String getHashSignature() {
-        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        InputStream input = classLoader.getResourceAsStream("hashsig.properties");
-        Properties p = new Properties();
-        try {
-            p.load(input);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return p.getProperty("hash_signature");
+        return System.getenv("hash_signature");
     }
 }
