@@ -44,7 +44,6 @@ Other requirements:
 - At least one external API must be leveraged
 
 Suggested bonus goals:
-- Deploy API using ECS w/ Docker (instead of Elastic Beanstalk)
 - Secure your Java API using Spring Security
 
 ## User Story
