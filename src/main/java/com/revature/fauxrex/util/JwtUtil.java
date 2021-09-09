@@ -19,6 +19,9 @@ source:
 https://github.com/koushikkothagal/spring-security-jwt
  */
 
+/**
+ * SPRING SECURITY
+ */
 @Service
 public class JwtUtil {
 

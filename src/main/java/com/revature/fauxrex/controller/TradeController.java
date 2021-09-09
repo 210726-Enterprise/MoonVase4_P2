@@ -15,24 +15,47 @@ import java.io.IOException;
 
 import java.util.List;
 
+
+/**
+ * Controller layer for Trade objects
+ */
 @CrossOrigin
 @Controller
 @RequestMapping("/trade")
 public class TradeController {
 
+    /**
+     * Service layer for Trade objects
+     */
     @Autowired
     private final TradeService tradeService;
 
+    /**
+     * Service layer for Trader objects
+     */
     @Autowired
     private final TraderService traderService;
 
+    /**
+     * Constructor for TradeController
+     *
+     * @param tradeService TradeService object
+     * @param traderService TraderService object
+     */
     @Autowired
     public TradeController(TradeService tradeService, TraderService traderService) {
         this.tradeService = tradeService;
         this.traderService = traderService;
     }
 
-    //CREATE
+    /**
+     * Create operation for Trade object
+     * @param trade Trade object to persist
+     * @return Trade object that has been persisted
+     *
+     * @throws JSONException
+     * @throws IOException
+     */
     @PostMapping
     public @ResponseBody
     Trade createTrade(@RequestBody Trade trade) throws JSONException, IOException {
@@ -43,7 +66,10 @@ public class TradeController {
         return tradeService.saveTrade(trade);
     }
 
-    //READ
+    /**
+     * Reading operation for a Trade by it's ID
+     * @return Trade read from the database with it's ID
+     */
     @GetMapping("/history")
     public @ResponseBody
     List<Trade> findTradeById() {

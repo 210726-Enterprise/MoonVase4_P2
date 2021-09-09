@@ -9,6 +9,9 @@ import javax.persistence.*;
 @Entity
 @Table(name="account")
 
+/**
+ * Model for Account object
+ */
 @Getter
 @Setter
 @NoArgsConstructor
@@ -31,6 +34,14 @@ public class Account {
     @Column(name="nzd", nullable = false)
     private Double nzd;
 
+    /**
+     * Full Constructor for Account object
+     * @param id
+     * @param usd
+     * @param gbp
+     * @param eur
+     * @param nzd
+     */
     public Account(int id, Double usd, Double gbp, Double eur, Double nzd) {
         this.id = id;
         this.usd = usd;

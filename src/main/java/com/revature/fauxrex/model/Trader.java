@@ -6,6 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+/**
+ * Model for Trader object
+ */
 @Entity
 @Table(name="trader")
 
@@ -14,6 +17,14 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Trader {
 
+    /**
+     * Constructor excluding Account for Trader object
+     * @param id
+     * @param username
+     * @param password
+     * @param firstName
+     * @param lastName
+     */
     public Trader(int id, String username, String password, String firstName, String lastName) {
         this.id = id;
         this.username = username;
@@ -22,7 +33,15 @@ public class Trader {
         this.lastName = lastName;
     }
 
-
+    /**
+     * Full constructor for Trader object
+     * @param id
+     * @param account
+     * @param username
+     * @param password
+     * @param firstName
+     * @param lastName
+     */
     public Trader(int id, Account account, String username, String password, String firstName, String lastName) {
         this.id = id;
         this.account = account;

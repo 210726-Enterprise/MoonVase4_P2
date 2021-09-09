@@ -21,6 +21,9 @@ source:
 https://github.com/koushikkothagal/spring-security-jwt
  */
 
+/**
+ * SPRING SECURITY
+ */
 @Component
 public class JwtRequestFilter extends OncePerRequestFilter {
 

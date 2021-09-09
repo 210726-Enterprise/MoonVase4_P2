@@ -11,17 +11,33 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 
+/**
+ * Service layer for TraderDetails
+ */
 @Service
 public class TraderDetailsService implements UserDetailsService {
 
+    /**
+     * Repository layer for Trader object
+     */
     @Autowired
     private final TraderRepository traderRepository;
 
+    /**
+     * Constructor for TraderDetailsService
+     * @param traderRepository TraderRepository object
+     */
     @Autowired
     public TraderDetailsService(TraderRepository traderRepository) {
         this.traderRepository = traderRepository;
     }
 
+    /**
+     * Overridden UserDetails for Spring Security
+     * @param s username of Trader
+     * @return UserDetails object for Trader
+     * @throws UsernameNotFoundException
+     */
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         Trader trader = traderRepository.findByUsername(s).orElseThrow(RuntimeException::new);
