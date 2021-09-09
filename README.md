@@ -47,15 +47,15 @@ Suggested bonus goals:
 - Secure your Java API using Spring Security
 
 User Story
--As a user I can create an account, so that I can have an account
--As a user I can log in with my credentials, so that I can access my account
--As a user I can view my current balances of available currencies, so that I can make informed financial decisions
--As a user I can view current trade quotes, so that I can make informed financial decisions
--As a user I can choose my amount per trading, so that I can see what would happen
--As a user I can update the current trade quotes, so that I can make informed financial decisions
--As a user I can confirm a trade, so that I can transfer currency
--As a user I can add more money, so that I can continue to conduct transactions
--As a user I can withdraw money, so that I can spend it
--As a user I can see my total in USD so that I can see my unrealized profit
--As a user I can close my account, so that I can stop conducting trades
--As a user I can view previous trades, so that I can see what has happened 
+- As a user I can create an account, so that I can have an account
+- As a user I can log in with my credentials, so that I can access my account
+- As a user I can view my current balances of available currencies, so that I can make informed financial decisions
+- As a user I can view current trade quotes, so that I can make informed financial decisions
+- As a user I can choose my amount per trading, so that I can see what would happen
+- As a user I can update the current trade quotes, so that I can make informed financial decisions
+- As a user I can confirm a trade, so that I can transfer currency
+- As a user I can add more money, so that I can continue to conduct transactions
+- As a user I can withdraw money, so that I can spend it
+- As a user I can see my total in USD so that I can see my unrealized profit
+- As a user I can close my account, so that I can stop conducting trades
+- As a user I can view previous trades, so that I can see what has happened 
