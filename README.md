@@ -1,5 +1,7 @@
 # MoonVase4_Project2
 
+
+## Description
 Faurex is an application that allows traders to exchange U.S Dollars to a set variety of foreign currencies: British Pounds, Euros and New Zealand Dollars. 
 Traders will be able to create a single account, deposit money, and compare the trade value of U.S Dollars to the other currencies. 
 The app will track these trades made for traders to review later. 
