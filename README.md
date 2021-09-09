@@ -47,7 +47,7 @@ Suggested bonus goals:
 - Deploy API using ECS w/ Docker (instead of Elastic Beanstalk)
 - Secure your Java API using Spring Security
 
-User Story
+## User Story
 - As a user I can create an account, so that I can have an account
 - As a user I can log in with my credentials, so that I can access my account
 - As a user I can view my current balances of available currencies, so that I can make informed financial decisions
